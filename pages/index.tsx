@@ -1,10 +1,12 @@
+import { ReactElement } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import {GetStaticProps} from "next";
 import utilStyles from "../styles/utils.module.css";
 import {getSortedPostsData} from "../lib/posts";
 import Layout, { siteTitle } from "../components/layout";
 import { Date } from "../components/date";
-const  Home = ({ allPostsData })=> {
+const  Home = ({ allPostsData }):ReactElement=> {
   return (
     <Layout home>
       <Head>
@@ -38,7 +40,7 @@ const  Home = ({ allPostsData })=> {
 };
 
 export default Home;
-export const getStaticProps = async () => {
+export const getStaticProps:GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {

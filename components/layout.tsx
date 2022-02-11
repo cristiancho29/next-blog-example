@@ -1,3 +1,4 @@
+import React, { ReactElement, ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
@@ -6,7 +7,7 @@ import styles from "./layout.module.css";
 
 const name = "Cristian";
 
-const Layout = ({ children, home })=> {
+const Layout = ({ children, home }:{children:ReactNode,home?:boolean}):ReactElement=> {
   return (
     <div className={styles.container}>
       <Head>
