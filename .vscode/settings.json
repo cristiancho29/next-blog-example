@@ -1,0 +1,9 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
